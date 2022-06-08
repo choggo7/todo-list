@@ -26,11 +26,8 @@ const handleTodoRemove = (id: string) => {
 }
 
 const handleTodoComplete = (id: string) => {
-  console.log("hited")
   const newTodosState: TodoInterface[] = [...todos]
-  
   newTodosState.find((todo: TodoInterface) => todo.id === id)!.isCompleted = !newTodosState.find((todo: TodoInterface) => todo.id === id)!.isCompleted
-  
   setTodos(newTodosState)
 }
 
@@ -55,6 +52,13 @@ const handleTodoBlur = (event: React.ChangeEvent<HTMLInputElement>) =>{
       handleTodoComplete={handleTodoComplete}
       handleTodoBlur={handleTodoBlur}
       />
+
+      <ul className="about">
+        <li>About</li>
+        <li className='uncomplet'><span>⚪</span> task not complet</li>
+        <li className='complet' ><span>✔</span> task complet</li>
+        <li className='remove'><span>⨯</span> to remove task</li>
+      </ul>
 
     </div>
   );

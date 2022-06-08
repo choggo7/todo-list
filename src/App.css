@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"),
+   url("./fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: bold;
+  }
+  *{
+    font-family: "Roboto";
+  }
 body,html{
   margin: 0px;padding: 0px;
   height: 100%;
@@ -14,6 +23,24 @@ body,html{
   color: 1em;
   color: white;
 }
+.App .about{
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  text-align: left;
+  width: 300px;
+  margin: 1em auto;
+  color: white;
+}
+.App .about .remove span{
+  font-size: 19px;
+  color:red ;
+}
+.App .about .complet span{
+  color: yellowgreen;
+  font-size: 19px;
+}
+.App .about .uncomplet span{font-size: 16px;}
 
 .App .todo__form,.App .todo__list{
   width: 50em;
@@ -21,6 +48,7 @@ body,html{
 }
 .App .todo__form{
   margin-bottom: 2em;
+  position: relative;
 }
 .App .todo__form .todo__text{
   width: calc(100% - 6em);
@@ -29,6 +57,15 @@ body,html{
   outline: none;
   border: 0px;
   box-shadow: none;
+}
+.App .todo__form .todo__butoon{
+  position: absolute;
+  right: 2em;
+  top: .2em;
+  background-color: teal;
+  color: white;
+  font-size: 16px;
+  padding: .6em .8em;
 }
 
 .App .todo__list ul{
