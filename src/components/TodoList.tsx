@@ -1,7 +1,9 @@
-import React from 'react'
+import React,{useState} from 'react'
 import TodoItem from './TodoItem'
 
 export const TodoList = (props:TodoListInterface) =>{
+  const [todos,setTodos] = useState<TodoInterface[]>([])
+
   return(
     <div className="todo__list">
 
