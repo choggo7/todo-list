@@ -26,6 +26,7 @@ const handleTodoRemove = (id: string) => {
 }
 
 const handleTodoComplete = (id: string) => {
+  console.log("hited")
   const newTodosState: TodoInterface[] = [...todos]
   
   newTodosState.find((todo: TodoInterface) => todo.id === id)!.isCompleted = !newTodosState.find((todo: TodoInterface) => todo.id === id)!.isCompleted
@@ -45,6 +46,7 @@ const handleTodoBlur = (event: React.ChangeEvent<HTMLInputElement>) =>{
 
   return (
     <div className="App">
+      <p className='description' >Add your task and hit enter 😎</p>
       <TodoForm todos={todos} handleTodoCreate={handleTodoCreate} />
       <TodoList 
       todos={todos}

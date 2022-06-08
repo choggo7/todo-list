@@ -10,3 +10,60 @@ body,html{
   height: 100%;width: 100%;
   padding-top: 3em;
 }
+.App .description{
+  color: 1em;
+  color: white;
+}
+
+.App .todo__form,.App .todo__list{
+  width: 50em;
+  margin: 0px auto;
+}
+.App .todo__form{
+  margin-bottom: 2em;
+}
+.App .todo__form .todo__text{
+  width: calc(100% - 6em);
+  padding: 1em 3em;
+  margin: 0px;
+  outline: none;
+  border: 0px;
+  box-shadow: none;
+}
+
+.App .todo__list ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+}
+.App .todo__list .todo__item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #cbcbcb;
+}
+.App .todo__list .todo__item .todo__item--container{
+  position: absolute;
+  left: 1em;
+  cursor: pointer;
+}
+.App .todo__list .todo__item .todo__item--container .todo__item--checked{color: yellowgreen; font-size: 19px;}
+.App .todo__list .todo__item .todo__item--container .todo__item--unchecked{color: orangered; font-size: 11px; }
+.App .todo__list .todo__item .todo__item--remove{
+  position: absolute;
+  right: 2em;
+  color: red;
+  cursor: pointer;
+}
+.App .todo__list .todo__item .todo__item--input{
+  width: calc(100% - 6em);
+  border: none;
+  box-shadow: none;
+  outline: none;
+  margin: 0px;
+  padding: 1em 4em;
+}
+/*.App .todo__form .todo__text:focus{box-shadow: 0 0 10px 1000px rgba(0,0,0,0.5);}*/
